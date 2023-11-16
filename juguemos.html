@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Trabajo Final</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">
+            <svg width="200" height="80">
+                <rect x="50" y="5" width="80" height="50" r="5" id="screenE" fill="lightgray"></rect>
+                <rect x="55" y="10" width="70" height="40" r="4" id="screenI" fill="lightyellow"></rect>
+                <rect x="72" y="12" width="15" height="15" id="red" fill="red"></rect>
+                <rect x="88" y="12" width="15" height="15" id="green" fill="rgb(18, 182, 18)"></rect>
+                <rect x="72" y="28" width="15" height="15" id="blue" fill="rgb(112, 205, 236)"></rect>
+                <rect x="88" y="28" width="15" height="15" id="yellow" fill="yellow"></rect>
+                <polygon points="50 55, 130 55, 160 105, 70 105, 50 55" r="5" id="kbd1" fill="lightgray"></polygon>
+                <polygon points="68 58, 127 58, 140 75, 65 75, 53 58" id="kbd2" fill="rgb(77, 73, 77)"></polygon>
+                <polygon points="60 60, 127 60, 128 62, 64 62, 60 60" id="keys1" fill="white"></polygon>
+                <polygon points="62 64, 129 64, 131 66, 64 66, 62 64" id="keys2" fill="white"></polygon>
+                <polygon points="66 67, 133 67, 134 69, 68 69, 66 67" id="keys3" fill="white"></polygon>
+                <polygon points="90 71, 120 71, 122 73, 92 73, 90 71" id="keys4" fill="white"></polygon>
+            </svg>
+            <ul class="menu">
+                <li class="itemMenu">
+                    <a class="itemLink" href="./historia.html">HISTORIA</a>
+                </li>
+                <li class="itemMenu" href="./juguemos.html">
+                    <a class="itemLink" href="./juguemos.html">JUGUEMOS</a>
+                </li>
+            </ul>
+    </nav>
+
+    <header>
+        <h1 class="tituloJuego">JUGUEMOS UN POCO</h1>
+    </header>
+    <main>
+        <h2 class="puzzleTitle">Armemos el rompecabezas y veamos qué imagen es...</h2>
+        <section class="juego">
+            <div hover class="cajas">
+                <div hover id="drop1" ondragenter="eventoDragEnter()" ondragleave="eventoDragLeave()"
+                    ondragover="eventoDragOver()" ondrop="eventoDrop(event)">
+                    <p>Arrastre y suelte la imagen aquí</p>
+                </div>
+                <div hover id="drop2" ondragenter="eventoDragEnter()" ondragleave="eventoDragLeave()"
+                    ondragover="eventoDragOver()" ondrop="eventoDrop(event)">
+                    <p>Arrastre y suelte la imagen aquí</p>
+                </div>
+                <div hover id="drop3" ondragenter="eventoDragEnter()" ondragleave="eventoDragLeave()"
+                    ondragover="eventoDragOver()" ondrop="eventoDrop(event)">
+                    <p>Arrastre y suelte la imagen aquí</p>
+                </div>
+            </div>
+
+            <div class="puzzleImages">
+                <img id="piece3" src="./imagenes/Rompe3.png" alt="imagen pieza de rompecabezas">
+                <img id="piece1" src="./imagenes/Rompe1.png" alt="imagen pieza de rompecabezas"
+                    ondragstart="startEvent(event)" ondrag="Drag(event)" ondragend="DragEnd(event)">
+                <img id="piece2" src="./imagenes/Rompe2.png" alt="imagen pieza de rompecabezas"
+                    ondragstart="startEvent(event)" ondrag="Drag(event)" ondragend="DragEnd(event)">
+            </div>
+            <button onclick="reinicio()" class="botonReinicio">Reiniciar</button>
+        </section>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
